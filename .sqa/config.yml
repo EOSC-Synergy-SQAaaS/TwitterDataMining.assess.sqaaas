@@ -1,0 +1,58 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.8
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/Ibercivis/TwitterDataMining:
+      branch: master
+      repo: https://github.com/Ibercivis/TwitterDataMining
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/Ibercivis/TwitterDataMining git:
+        commands:
+        - /usr/bin/env sh .sqa/script.hilly-harlequin-nightingale.sh
+        container: qc.acc_flabby-amber-ragdoll
+  QC.Doc:
+    repos:
+      github.com/Ibercivis/TwitterDataMining find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-purple-gar.sh
+        container: qc.doc_homely-persimmon-ray
+      github.com/Ibercivis/TwitterDataMining git:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-amber-whale.sh
+        container: qc.doc_squeaky-orchid-frog
+      github.com/Ibercivis/TwitterDataMining restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.fuzzy-aquamarine-binturong.sh
+        container: qc.doc_gamy-lemon-cattle
+  QC.Lic:
+    repos:
+      github.com/Ibercivis/TwitterDataMining licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-dandelion-axolotl.sh
+        container: qc.lic_goopy-tomato-oyster
+  QC.Sec:
+    repos:
+      github.com/Ibercivis/TwitterDataMining bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-magnolia-mastiff.sh
+        container: qc.sec_shabby-burgundy-bear
+  QC.Sty:
+    repos:
+      github.com/Ibercivis/TwitterDataMining flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.tasty-buff-moorhen.sh
+        container: qc.sty_snappy-cream-olm
+  QC.Ver:
+    repos:
+      github.com/Ibercivis/TwitterDataMining get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-violet-budgerigar.sh
+        container: qc.ver_slimy-tan-markhor
+timeout: 5400
