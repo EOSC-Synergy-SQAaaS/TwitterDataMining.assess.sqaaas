@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/Ibercivis/TwitterDataMining git:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-harlequin-nightingale.sh
-        container: qc.acc_flabby-amber-ragdoll
+        - /usr/bin/env sh .sqa/script.jumpy-aqua-toucan.sh
+        container: qc.acc_sleepy-malachite-snake
   QC.Doc:
     repos:
       github.com/Ibercivis/TwitterDataMining find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-purple-gar.sh
-        container: qc.doc_homely-persimmon-ray
+        - /usr/bin/env sh .sqa/script.flimsy-bistre-eagle.sh
+        container: qc.doc_tacky-vermilion-frise
       github.com/Ibercivis/TwitterDataMining git:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-amber-whale.sh
-        container: qc.doc_squeaky-orchid-frog
+        - /usr/bin/env sh .sqa/script.hazy-olivine-gerbil.sh
+        container: qc.doc_homely-chestnut-neanderthal
       github.com/Ibercivis/TwitterDataMining restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-aquamarine-binturong.sh
-        container: qc.doc_gamy-lemon-cattle
+        - /usr/bin/env sh .sqa/script.flaky-ultramarine-saola.sh
+        container: qc.doc_snappy-alizarin-macaque
   QC.Lic:
     repos:
       github.com/Ibercivis/TwitterDataMining licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-dandelion-axolotl.sh
-        container: qc.lic_goopy-tomato-oyster
+        - /usr/bin/env sh .sqa/script.shabby-peach-chinchilla.sh
+        container: qc.lic_woolly-maroon-turtle
   QC.Sec:
     repos:
       github.com/Ibercivis/TwitterDataMining bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-magnolia-mastiff.sh
-        container: qc.sec_shabby-burgundy-bear
+        - /usr/bin/env sh .sqa/script.hasty-lilac-turkey.sh
+        container: qc.sec_dorky-ivory-ocelot
   QC.Sty:
     repos:
       github.com/Ibercivis/TwitterDataMining flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-buff-moorhen.sh
-        container: qc.sty_snappy-cream-olm
+        - /usr/bin/env sh .sqa/script.snoopy-crimson-dragon.sh
+        container: qc.sty_crabby-viridian-stoat
   QC.Ver:
     repos:
       github.com/Ibercivis/TwitterDataMining get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-violet-budgerigar.sh
-        container: qc.ver_slimy-tan-markhor
+        - /usr/bin/env sh .sqa/script.sickly-smalt-stingray.sh
+        container: qc.ver_pretty-fuchsia-mist
 timeout: 5400
